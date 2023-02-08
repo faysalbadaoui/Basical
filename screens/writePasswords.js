@@ -130,7 +130,7 @@ export function writePhone({navigation}) {
           {renderModal()}
           <TextInput
             style={styles.phoneInput}
-            placeholder="Enter your phone number"
+            placeholder=""
             keyboardType="numeric"
             value={phoneNumber}
             onChangeText={onChangePhone}
@@ -140,14 +140,7 @@ export function writePhone({navigation}) {
       </KeyboardAvoidingView>
       <View style = {{width: '100%', alignItems: 'center', justifyContent: 'center', marginBottom: '10%'}}>
         <View style={styles.viewBottom}>
-          <TouchableOpacity onPress={() => {
-            if (phoneNumber != null) {
-              navigation.navigate("WNAME");
-            }else{
-              console.log("user didn't input phoneNumber");
-            }
-          }
-          }>
+          <TouchableOpacity>
             <View
               style={[
                 styles.btnContinue,
@@ -229,7 +222,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 2,
     backgroundColor: 'transparent',
-    fontSize: 15,
+    fontSize: 30,
     color: '#696969',
     letterSpacing: 1,
   },
