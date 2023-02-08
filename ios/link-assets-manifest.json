@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "fonts/abnes.ttf",
+      "sha1": "adda2070d203c5dcfef52c641ba7a18070e7c5e1"
+    },
+    {
+      "path": "fonts/Kusanagi.otf",
+      "sha1": "19d63b79ada762fb90ccbc0f4be846413437b799"
+    },
+    {
+      "path": "fonts/Kusanagi.ttf",
+      "sha1": "ba8153f5795298f2c226f98ed4e64a8468ebc2ad"
+    }
+  ]
+}
