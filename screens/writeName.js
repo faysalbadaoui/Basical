@@ -16,7 +16,7 @@ import {
 
 import SVGatorComponent from '../initialLogo';
 import {Countries} from '../Countries';
-export function writePhone({navigation}) {
+export function writeName({navigation}) {
   const defaultCodeCountry = '34';
   const defaultFlag = '🇪🇸';
   const [phoneNumber, setPhonenumber] = useState();
@@ -44,63 +44,6 @@ export function writePhone({navigation}) {
     setCountryFlag(item.flag);
     onShowHiddenModal();
   };
-  let renderModal = () => {
-    return (
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        style={{marginTop: 200, justifyContent: 'flex-end'}}>
-        <SafeAreaView
-          style={{
-            width: '100%',
-            height: '40%',
-            alignSelf: 'flex-end',
-            justifyContent: 'flex-end',
-            marginTop: '90%',
-            backgroundColor: '#f1f1f1',
-          }}>
-          <View style={styles.modalContainer}>
-            <View style={styles.filterinputContainer}>
-              <TextInput
-                autoFocus={true}
-                onChangeText={filterCountries}
-                placeholder={'Filter'}
-                focusable={true}
-                style={styles.filterInputStyle}
-              />
-              <TouchableOpacity
-                onPress={onShowHiddenModal}
-                style={styles.closeButtonStyle}>
-                <Text style={styles.closeTextStyle}>{'DONE'}</Text>
-              </TouchableOpacity>
-            </View>
-
-            <FlatList
-              style={{width: '100%'}}
-              data={dataCountries}
-              extraData={dataCountries}
-              keyExtractor={(item, index) => index.toString()}
-              renderItem={({item}) => (
-                <TouchableWithoutFeedback onPress={() => onCountryChange(item)}>
-                  <View style={styles.countryModalStyle}>
-                    <View style={styles.modalItemContainer}>
-                      <Text style={styles.modalItemName}>{item.flag}</Text>
-                      <Text style={styles.modalItemCountry}>{item.name}</Text>
-                      <Text style={styles.modalItemDialCode}>
-                        {'+' + item.phoneCode}
-                      </Text>
-                    </View>
-                  </View>
-                </TouchableWithoutFeedback>
-              )}
-            />
-          </View>
-        </SafeAreaView>
-      </Modal>
-    );
-  };
-
   return (
     <View
       style={{
@@ -115,22 +58,15 @@ export function writePhone({navigation}) {
         behavior={'padding'}
         style={styles.containerAvoiddingView}>
         <View style={styles.mainText}>
-          <Text style={styles.textTitle}> Enter your phone number</Text>
+          <Text style={styles.textTitle}> Enter your name</Text>
           <Text style={styles.textInfo}>
-            It's going to be used in the future to offer the web platform of
-            Basical.
+            This way we can address you in a more formal way.
           </Text>
         </View>
-        <View style={[styles.containerInput, {}]}>
-          <TouchableOpacity onPress={onShowHiddenModal}>
-            <View style={styles.openDialogView}>
-              <Text style={{color: 'black', fontSize: 30}}>{countryFlag}</Text>
-            </View>
-          </TouchableOpacity>
-          {renderModal()}
+        <View style={styles.containerInput}>
           <TextInput
             style={styles.phoneInput}
-            placeholder="Enter your phone number"
+            placeholder="Write your name"
             keyboardType="numeric"
             value={phoneNumber}
             onChangeText={onChangePhone}
@@ -140,14 +76,7 @@ export function writePhone({navigation}) {
       </KeyboardAvoidingView>
       <View style = {{width: '100%', alignItems: 'center', justifyContent: 'center', marginBottom: '10%'}}>
         <View style={styles.viewBottom}>
-          <TouchableOpacity onPress={() => {
-            if (phoneNumber != null) {
-              navigation.navigate("WNAME");
-            }else{
-              console.log("user didn't input phoneNumber");
-            }
-          }
-          }>
+          <TouchableOpacity>
             <View
               style={[
                 styles.btnContinue,
