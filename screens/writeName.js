@@ -58,7 +58,7 @@ export function writeName({navigation}) {
         behavior={'padding'}
         style={styles.containerAvoiddingView}>
         <View style={styles.mainText}>
-          <Text style={styles.textTitle}> Enter your name</Text>
+          <Text style={styles.textTitle}> Enter your name.</Text>
           <Text style={styles.textInfo}>
             This way we can address you in a more formal way.
           </Text>
@@ -67,7 +67,7 @@ export function writeName({navigation}) {
           <TextInput
             style={styles.phoneInput}
             placeholder="Write your name"
-            keyboardType="numeric"
+            keyboardType="default"
             value={phoneNumber}
             onChangeText={onChangePhone}
             secureTextEntry={false}
@@ -76,7 +76,13 @@ export function writeName({navigation}) {
       </KeyboardAvoidingView>
       <View style = {{width: '100%', alignItems: 'center', justifyContent: 'center', marginBottom: '10%'}}>
         <View style={styles.viewBottom}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => {
+            if(phoneNumber != null){
+              navigation.navigate("WPASS");
+            }else{
+              console.log("User didn't input name");
+            }
+          }}>
             <View
               style={[
                 styles.btnContinue,

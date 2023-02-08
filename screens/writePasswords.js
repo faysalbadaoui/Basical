@@ -16,10 +16,11 @@ import {
 
 import SVGatorComponent from '../initialLogo';
 import {Countries} from '../Countries';
-export function writePhone({navigation}) {
+export function writePasswords({navigation}) {
   const defaultCodeCountry = '34';
   const defaultFlag = '🇪🇸';
   const [phoneNumber, setPhonenumber] = useState();
+  const [password2, setpassword2] = useState();
   const [modalVisible, setModalVisible] = useState(false);
   const [dataCountries, setDataCountries] = useState(Countries);
   const [countryFlag, setCountryFlag] = useState(defaultFlag);
@@ -28,6 +29,9 @@ export function writePhone({navigation}) {
   };
   const onChangePhone = number => {
     setPhonenumber(number);
+  };
+  const onChangePhone2 = number => {
+    setpassword2(number);
   };
   const filterCountries = value => {
     if (value) {
@@ -44,63 +48,6 @@ export function writePhone({navigation}) {
     setCountryFlag(item.flag);
     onShowHiddenModal();
   };
-  let renderModal = () => {
-    return (
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        style={{marginTop: 200, justifyContent: 'flex-end'}}>
-        <SafeAreaView
-          style={{
-            width: '100%',
-            height: '40%',
-            alignSelf: 'flex-end',
-            justifyContent: 'flex-end',
-            marginTop: '90%',
-            backgroundColor: '#f1f1f1',
-          }}>
-          <View style={styles.modalContainer}>
-            <View style={styles.filterinputContainer}>
-              <TextInput
-                autoFocus={true}
-                onChangeText={filterCountries}
-                placeholder={'Filter'}
-                focusable={true}
-                style={styles.filterInputStyle}
-              />
-              <TouchableOpacity
-                onPress={onShowHiddenModal}
-                style={styles.closeButtonStyle}>
-                <Text style={styles.closeTextStyle}>{'DONE'}</Text>
-              </TouchableOpacity>
-            </View>
-
-            <FlatList
-              style={{width: '100%'}}
-              data={dataCountries}
-              extraData={dataCountries}
-              keyExtractor={(item, index) => index.toString()}
-              renderItem={({item}) => (
-                <TouchableWithoutFeedback onPress={() => onCountryChange(item)}>
-                  <View style={styles.countryModalStyle}>
-                    <View style={styles.modalItemContainer}>
-                      <Text style={styles.modalItemName}>{item.flag}</Text>
-                      <Text style={styles.modalItemCountry}>{item.name}</Text>
-                      <Text style={styles.modalItemDialCode}>
-                        {'+' + item.phoneCode}
-                      </Text>
-                    </View>
-                  </View>
-                </TouchableWithoutFeedback>
-              )}
-            />
-          </View>
-        </SafeAreaView>
-      </Modal>
-    );
-  };
-
   return (
     <View
       style={{
@@ -115,32 +62,41 @@ export function writePhone({navigation}) {
         behavior={'padding'}
         style={styles.containerAvoiddingView}>
         <View style={styles.mainText}>
-          <Text style={styles.textTitle}> Enter your phone number</Text>
+          <Text style={styles.textTitle}> Enter your password.</Text>
           <Text style={styles.textInfo}>
-            It's going to be used in the future to offer the web platform of
-            Basical.
+            Finally, confirm and enter your password for safety purposes.
           </Text>
         </View>
         <View style={[styles.containerInput, {}]}>
-          <TouchableOpacity onPress={onShowHiddenModal}>
-            <View style={styles.openDialogView}>
-              <Text style={{color: 'black', fontSize: 30}}>{countryFlag}</Text>
-            </View>
-          </TouchableOpacity>
-          {renderModal()}
           <TextInput
             style={styles.phoneInput}
-            placeholder=""
-            keyboardType="numeric"
+            placeholder="Enter your password"
+            keyboardType="default"
             value={phoneNumber}
             onChangeText={onChangePhone}
+            secureTextEntry={false}
+          />
+          <TextInput
+            style={styles.phoneInput}
+            placeholder="Confirm your password"
+            keyboardType="default"
+            value={password2}
+            onChangeText={onChangePhone2}
             secureTextEntry={false}
           />
         </View>
       </KeyboardAvoidingView>
       <View style = {{width: '100%', alignItems: 'center', justifyContent: 'center', marginBottom: '10%'}}>
         <View style={styles.viewBottom}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>{
+            if(password2 == phoneNumber){
+              if(password2 != null && phoneNumber != null){
+                navigation.navigate("MAINMENU");
+              }
+            }else{
+              console.log("Passwords must be equals!");
+            }
+          }}>
             <View
               style={[
                 styles.btnContinue,
@@ -177,6 +133,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 10,
+    width: '100%',
   },
   textTitle: {
     fontSize: 24,
@@ -196,12 +153,13 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   containerInput: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     paddingHorizontal: 12,
     borderRadius: 10,
     backgroundColor: 'transparent',
     alignItems: 'center',
     borderColor: '#E7E7E7',
+    width: '100%',
   },
   openDialogView: {
     flexDirection: 'row',
@@ -216,15 +174,16 @@ const styles = StyleSheet.create({
   },
   phoneInput: {
     marginLeft: 5,
-    flex: 1,
     height: 60,
     borderColor: '#E7E7E7',
     borderRadius: 10,
     borderWidth: 2,
     backgroundColor: 'transparent',
-    fontSize: 30,
+    fontSize: 15,
     color: '#696969',
     letterSpacing: 1,
+    width: '100%',
+    marginBottom: 10,
   },
   passInput: {
     marginRight: 10,
