@@ -115,7 +115,7 @@ export function writePhone({navigation}) {
         behavior={'padding'}
         style={styles.containerAvoiddingView}>
         <View style={styles.mainText}>
-          <Text style={styles.textTitle}> Enter your phone number</Text>
+          <Text style={styles.textTitle}> Enter your phone number.</Text>
           <Text style={styles.textInfo}>
             It's going to be used in the future to offer the web platform of
             Basical.
