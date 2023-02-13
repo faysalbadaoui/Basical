@@ -11,7 +11,7 @@ import { TodoElem } from '../components/TodoElem';
 export function mainMenu({navigation}){
 
   return (
-    <ScrollView style={{backgroundColor:'white', width: '100%', height: '100%', padding:'2%',}}>
+    <ScrollView style={{width: '100%', height: '100%', padding:'2%', paddingTop:'5%', backgroundColor:'white'}}>
       <View style={{width: '100%', alignItems: 'center', flexDirection: 'row', justifyContent:'flex-start'}}>
         <View style={{width: 60, height: 60, alignitems: 'center', justifyContent: 'center'}}>
           <SVGatorComponent />
@@ -20,17 +20,15 @@ export function mainMenu({navigation}){
       </View>
       <Text style={{fontSize: 25, fontWeight:'bold', color:'#4f4f4f', marginTop:'2%'}}>Today's Tasks</Text>
       <View style={{width:'100%', height:'20%', backgroundColor:'white', flex:1}}>
-        <TodoElem />
-        <TodoElem />
+        <TodoElem taskName={"Task1"}/>
+        <TodoElem taskName={"Tsk2"}/>
       </View>
       <Text style={{fontSize: 25, fontWeight:'bold',marginTop:'5%', color:'#4f4f4f'}}>Upcoming Tasks</Text>
       <View style={{width:'100%', height:'20%', backgroundColor:'white', flex:1}}>
-        <TodoElem />
-        <TodoElem />
-        <TodoElem />
-
+        <TodoElem taskName={"Task3"}/>
+        <TodoElem taskName={"Task4"}/>
+        <TodoElem taskName={"Task5"}/>
       </View>
-
     </ScrollView>
   );
 }

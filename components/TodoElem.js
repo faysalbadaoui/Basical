@@ -8,13 +8,13 @@ import {
 import { useFonts } from 'expo-font';
 import SVGatorComponent from '../initialLogo';
 
-export function TodoElem({navigation}){
+export function TodoElem({navigation, taskName}){
 
   return (
     <View style={{backgroundColor:'white', width: '100%',
       height: 60, padding:5,  alignItems: 'flex-start', justifyContent: 'center', marginTop: '5%',
       borderWidth: 3, borderColor:'#7E7E7E', borderRadius: 12, alignSelf:'center'}}>
-      <Text style={{fontSize: 20, fontWeight:'bold', alignSelf:'flex-end'}}>Task Name</Text>
+      <Text style={{fontSize: 20, fontWeight:'bold', alignSelf:'flex-end'}}>{taskName}</Text>
     </View>
   );
 }
