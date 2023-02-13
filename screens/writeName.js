@@ -78,7 +78,7 @@ export function writeName({navigation}) {
         <View style={styles.viewBottom}>
           <TouchableOpacity onPress={() => {
             if(phoneNumber != null){
-              navigation.navigate("WPASS");
+              navigation.navigate('WPASS');
             }else{
               console.log("User didn't input name");
             }

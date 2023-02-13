@@ -74,7 +74,7 @@ export function writePasswords({navigation}) {
             keyboardType="default"
             value={phoneNumber}
             onChangeText={onChangePhone}
-            secureTextEntry={false}
+            secureTextEntry={true}
           />
           <TextInput
             style={styles.phoneInput}
@@ -82,7 +82,7 @@ export function writePasswords({navigation}) {
             keyboardType="default"
             value={password2}
             onChangeText={onChangePhone2}
-            secureTextEntry={false}
+            secureTextEntry={true}
           />
         </View>
       </KeyboardAvoidingView>
