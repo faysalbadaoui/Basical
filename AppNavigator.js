@@ -7,7 +7,7 @@ import {writeName} from './screens/writeName';
 import {writePasswords} from "./screens/writePasswords";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import { mainMenu } from "./screens/mainMenu";
+import { mainMenu } from './screens/mainMenu';
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -15,7 +15,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName={'INITIAL'}>
+        initialRouteName={'MAINMENU'}>
         <Stack.Screen name="INITIAL" component={initialScreen} />
         <Stack.Screen name="WPHONE" component={writePhone} />
         <Stack.Screen name="WNAME" component={writeName} />

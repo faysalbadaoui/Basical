@@ -3,30 +3,34 @@ import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   TouchableOpacity,
-  View, Text,
+  View, Text,ScrollView
 } from 'react-native';
 import { useFonts } from 'expo-font';
 import SVGatorComponent from '../initialLogo';
-
+import { TodoElem } from '../components/TodoElem';
 export function mainMenu({navigation}){
 
   return (
-    <View style={{backgroundColor:'white', width: '100%', height: '100%', alignItems: 'flex-start', justifyContent: 'flex-start', marginTop: '5%', marginLeft: '5%'}}>
-      <View style={{width: '100%', alignItems: 'center', flexDirection: 'row', marginTop:'0%', justifyContent:'flex-start'}}>
+    <ScrollView style={{backgroundColor:'white', width: '100%', height: '100%', padding:'2%',}}>
+      <View style={{width: '100%', alignItems: 'center', flexDirection: 'row', justifyContent:'flex-start'}}>
         <View style={{width: 60, height: 60, alignitems: 'center', justifyContent: 'center'}}>
           <SVGatorComponent />
         </View>
         <Text style={{fontSize: 30, fontWeight:'bold', color:'#4f4f4f', marginLeft:'2%'}}>Hello Faysal</Text>
       </View>
       <Text style={{fontSize: 25, fontWeight:'bold', color:'#4f4f4f', marginTop:'2%'}}>Today's Tasks</Text>
-      <View style={{width:'90%', height:'30%', borderWidth:4, borderColor:'rgba(0,0,0,0.1)', borderRadius:30, marginTop:'5%'}}>
+      <View style={{width:'100%', height:'20%', backgroundColor:'white', flex:1}}>
+        <TodoElem />
+        <TodoElem />
+      </View>
+      <Text style={{fontSize: 25, fontWeight:'bold',marginTop:'5%', color:'#4f4f4f'}}>Upcoming Tasks</Text>
+      <View style={{width:'100%', height:'20%', backgroundColor:'white', flex:1}}>
+        <TodoElem />
+        <TodoElem />
+        <TodoElem />
 
       </View>
-      <Text style={{fontSize: 25, fontWeight:'bold', color:'#4f4f4f', marginTop:'2%'}}>Upcoming Tasks</Text>
-      <View style={{width:'90%', height:'30%', borderWidth:4, borderColor:'rgba(0,0,0,0.1)', borderRadius:30, marginTop:'5%'}}>
 
-      </View>
-
-    </View>
+    </ScrollView>
   );
 }
