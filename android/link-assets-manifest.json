@@ -2,16 +2,12 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "fonts/abnes.ttf",
-      "sha1": "adda2070d203c5dcfef52c641ba7a18070e7c5e1"
+      "path": "assets/fonts/Movement.ttf",
+      "sha1": "780511b1c24329b39ba98784ea9ed16ac9c676a3"
     },
     {
-      "path": "fonts/Kusanagi.otf",
-      "sha1": "19d63b79ada762fb90ccbc0f4be846413437b799"
-    },
-    {
-      "path": "fonts/Kusanagi.ttf",
-      "sha1": "ba8153f5795298f2c226f98ed4e64a8468ebc2ad"
+      "path": "assets/fonts/OldSansBlack.ttf",
+      "sha1": "0ac2b6c68eec6e0f74a07b3bf05dc092ff01ac3d"
     }
   ]
 }

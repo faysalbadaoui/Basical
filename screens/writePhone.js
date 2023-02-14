@@ -192,15 +192,17 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     textAlign: 'justify',
     marginLeft: -4,
+    fontFamily: 'OldSansBlack',
   },
   textInfo: {
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: '500',
     color: '#696969',
     textAlign: 'justify',
     marginTop: 10,
     lineHeight: 22,
     alignSelf: 'flex-start',
+    fontFamily: 'OldSansBlack',
   },
   containerInput: {
     flexDirection: 'row',
