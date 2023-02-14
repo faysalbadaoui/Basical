@@ -53,9 +53,8 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Kusanagi.otf</string>
-		<string>abnes.ttf</string>
-		<string>Kusanagi.ttf</string>
+		<string>Movement.ttf</string>
+		<string>OldSansBlack.ttf</string>
 	</array>
 </dict>
 </plist>

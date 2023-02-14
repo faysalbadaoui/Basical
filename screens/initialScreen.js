@@ -66,7 +66,7 @@ export function initialScreen({navigation}) {
         }}>
         <SVGatorComponent />
       </View>
-      <Text style={{fontSize: 35,color:'rgba(0, 0, 0, 0.9)', fontFamily: 'Kusanagi'}}>BASICAL</Text>
+      <Text style={{fontSize: 50,color:'rgba(0, 0, 0, 0.9)', fontFamily: 'Movement'}}>BASICAL</Text>
       <TouchableWithoutFeedback style={{marginTop: '80%'}} onPressIn={this.handleAirhorn} onPressOut={this.handleButtonUp}>
         <View style={styles.button}>
           <View style={styles.outer}>
@@ -106,7 +106,8 @@ const styles = StyleSheet.create({
   },
   white: {
     color: '#FFF',
-    fontSize: 20,
-    fontFamily:'Kusanagi',
+    fontSize: 25,
+    fontFamily:'OldSansBlack',
+    letterSpacing: 2,
   },
 });
