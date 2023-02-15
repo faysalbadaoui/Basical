@@ -1,7 +1,7 @@
 # BasicalAPP
 ![Banner BasicalREADME](https://user-images.githubusercontent.com/73638078/219115922-9550e885-ed38-4317-a08a-c831dd7ce1be.jpg)
 ## Wassup brother!
-Welcome to "BASICAL" the To-Do Lists and Life Organization mobile phone app! This app has been developed using React Native, and is available for both iOS and Android. 
+Welcome to "BASICAL", the To-Do Lists and Life Organization mobile phone app! This app has been developed using React Native, and is available for both iOS and Android. 
 
 
 Planning and organizing everyday tasks can be difficult and overwhelming. That is why this app has been designed to simplify the process. Whether it’s a grocery list, a business plan or a simple to-do list, this app can help you organize your life. 
