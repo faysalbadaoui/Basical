@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useEffect, useState } from "react";
 // @ts-ignore
 import type {PropsWithChildren} from 'react';
 import {
@@ -11,7 +11,7 @@ import { TodoElem } from '../components/TodoElem';
 export function mainMenu({navigation}){
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
-
+  const [currentDate, setCurrentDate] = useState('');
   const handleAddTask = () => {
     Keyboard.dismiss();
     setTaskItems([...taskItems, task])
@@ -23,14 +23,25 @@ export function mainMenu({navigation}){
     itemsCopy.splice(index, 1);
     setTaskItems(itemsCopy)
   }
-
+  useEffect(() => {
+    var date = new Date().getDate(); //Current Date
+    var month = new Date().getMonth() + 1; //Current Month
+    var year = new Date().getFullYear(); //Current Year
+    var hours = new Date().getHours(); //Current Hours
+    var min = new Date().getMinutes(); //Current Minutes
+    var sec = new Date().getSeconds(); //Current Seconds
+    setCurrentDate(
+      date + '/' + month + '/' + year
+    );
+  }, []);
   return (
+
     <ScrollView contentContainerStyle={{width: '100%', height: '100%', padding:'2%', paddingTop:'5%', backgroundColor:'white'}}>
       <View style={{width: '100%', alignItems: 'center', flexDirection: 'row', justifyContent:'flex-start'}}>
         <View style={{width: 60, height: 60, alignitems: 'center', justifyContent: 'center'}}>
           <SVGatorComponent />
         </View>
-        <Text style={{fontSize: 30, color:'#4f4f4f', marginLeft:'2%', fontFamily: 'OldSansBlack'}}>Hello User</Text>
+        <Text style={{fontSize: 30, color:'#4f4f4f', marginLeft:'2%', fontFamily: 'OldSansBlack'}}>Hello Faysal</Text>
       </View>
       <Text style={{fontSize: 25, color:'#4f4f4f', marginTop:'2%', fontFamily: 'OldSansBlack'}}>Today's Tasks</Text>
       <View style={{width:'100%', height:'20%', backgroundColor:'white', flex:1}}>
@@ -56,18 +67,6 @@ export function mainMenu({navigation}){
           })
         }
       </View>
-      {/*<Text style={{fontSize: 25, marginTop:'5%', color:'#4f4f4f', fontFamily: 'OldSansBlack'}}>Upcoming Tasks</Text>
-      <View style={{width:'100%', height:'20%', backgroundColor:'white', flex:1}}>
-        {
-          taskItems.map((item, index) => {
-            return (
-              <TouchableOpacity key={index}  onPress={() => completeTask(index)}>
-                <TodoElem text={item} />
-              </TouchableOpacity>
-            )
-          })
-        }
-      </View>*/}
       <KeyboardAvoidingView
         style={styles.writeTaskWrapper}
       >
