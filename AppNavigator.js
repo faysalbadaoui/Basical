@@ -15,7 +15,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName={'MAINMENU'}>
+        initialRouteName={'INITIAL'}>
         <Stack.Screen name="INITIAL" component={initialScreen} />
         <Stack.Screen name="WPHONE" component={writePhone} />
         <Stack.Screen name="WNAME" component={writeName} />

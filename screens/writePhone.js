@@ -195,14 +195,13 @@ const styles = StyleSheet.create({
     fontFamily: 'OldSansBlack',
   },
   textInfo: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: '500',
     color: '#696969',
     textAlign: 'justify',
     marginTop: 10,
     lineHeight: 22,
     alignSelf: 'flex-start',
-    fontFamily: 'OldSansBlack',
   },
   containerInput: {
     flexDirection: 'row',
