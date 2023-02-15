@@ -1,7 +1,7 @@
 # BasicalAPP
 ![Banner BasicalREADME](https://user-images.githubusercontent.com/73638078/219115922-9550e885-ed38-4317-a08a-c831dd7ce1be.jpg)
 ## Wassup brother!
-Welcome to "BASICAL", the To-Do Lists and Life Organization mobile phone app! This app has been developed using React Native, and is available for both iOS and Android. 
+Welcome to **BASICAL**, the To-Do Lists and Life Organization mobile phone app! This app has been developed using React Native, and is available for both iOS and Android. 
 
 
 Planning and organizing everyday tasks can be difficult and overwhelming. That is why this app has been designed to simplify the process. Whether it’s a grocery list, a business plan or a simple to-do list, this app can help you organize your life. 
@@ -16,4 +16,18 @@ You can also use this app to create your own personal goals and action plans. Wi
 Finally, the app is completely secure. All your data is kept safe and encrypted, so you can rest assured that your information is in good hands. 
 
 
-Try out the To-Do Lists and Life Organization app today and make the most of your day!
+Try out **BASICAL** today and make the most of your day!
+##About the App:
+* This app has a unique, simple, and beautiful design, made by a designers team.
+* Has an easy app navigation and users can add tasks just by pressing the "+" button.
+## Important to know!
+* This repo contains the Open Source version of the App.
+* The hole app Is developed using React-native.
+* Node Is necessari to run the app.
+## What does the full version contain?
+* Push-notifications of the Tasks.
+* Web app version of **Basical**.
+* Hability to create projects and tasks related to.
+* Tasks organized by a deadline which the user enters.
+* Capacity of adding files Into the projects, alongside with the capacity of linking Git-hub and GDrive ecosystem. 
+* **Basical** displayed in 4 more languages.
