@@ -31,3 +31,11 @@ Try out **BASICAL** today and make the most of your day!
 * Tasks organized by a deadline which the user enters.
 * Capacity of adding files Into the projects, alongside with the capacity of linking Git-hub and GDrive ecosystem. 
 * **Basical** displayed in 4 more languages.
+## How do I run **Basical**?
+```
+Setup the Android SDK Environment variable.
+Setup the Android/iOS Emulator
+npm install
+npm start
+npm run android/ios
+```
