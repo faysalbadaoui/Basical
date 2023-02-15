@@ -32,10 +32,18 @@ Try out **BASICAL** today and make the most of your day!
 * Capacity of adding files Into the projects, alongside with the capacity of linking Git-hub and GDrive ecosystem. 
 * **Basical** displayed in 4 more languages.
 ## How do I run **Basical**?
+* Setup the Android SDK Environment variable.
+* Setup the Android/iOS Emulator.
 ```
-Setup the Android SDK Environment variable.
-Setup the Android/iOS Emulator
 npm install
 npm start
 npm run android/ios
 ```
+## Conclusion
+I hope you liked the repo and for any doubt or suggest feel free to contact me. All the social data Is available on my profile.
+Don't forget to leave a follow ❤️.
+## Authors
+* Faysal Badaoui Mahdad (Me).
+* Anonymous group of designers.
+## Licence
+This software Is protected under **[GNU GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.html)** licence and any violation of its terms and conditions may result in legal action. 
