@@ -47,4 +47,4 @@ Don't forget to leave a follow ❤️.
 * Faysal Badaoui Mahdad (Me).
 * Anonymous group of designers.
 ## Licence
-This software Is protected under **[GNU GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.html)** licence and any violation of its terms and conditions may result in legal action. 
+This software Is protected under **[CC0 1.0](https://github.com/FaysalBM/Basical/blob/main/LICENSE.md)** licence and any violation of its terms and conditions may result in legal action. 
