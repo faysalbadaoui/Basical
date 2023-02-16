@@ -17,7 +17,7 @@ Finally, the app is completely secure. All your data is kept safe and encrypted,
 
 
 Try out **BASICAL** today and make the most of your day!
-##About the App:
+## About the App:
 * This app has a unique, simple, and beautiful design, made by a designers team.
 * Has an easy app navigation and users can add tasks just by pressing the "+" button.
 ## Important to know!
